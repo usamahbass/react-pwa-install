@@ -1,7 +1,7 @@
 import React from "react";
 import { Drawer, Button, Typography, Box } from "@material-ui/core";
 
-const SnackbarInstall = ({
+const DrawerInstall = ({
   open,
   onClose,
   description,
@@ -46,4 +46,4 @@ const SnackbarInstall = ({
   );
 };
 
-export default SnackbarInstall;
+export default DrawerInstall;

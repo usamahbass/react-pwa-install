@@ -6,7 +6,7 @@ import React, {
   useContext,
 } from "react";
 import { platforms, getPlatform } from "./Platforms";
-import SnackbarInstall from "./SnackbarInstall";
+import DrawerInstall from "./DrawerInstall";
 import "./index.css";
 
 const ReactPWAInstallContext = createContext(Promise.reject);
@@ -134,7 +134,7 @@ export const ReactPWAInstallProvider = ({ children, enableLogging }) => {
         children={children}
       />
 
-      <SnackbarInstall
+      <DrawerInstall
         onClose={handleClose}
         open={Boolean(dialogState)}
         handleInstall={handleInstall}
