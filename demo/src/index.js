@@ -10,20 +10,14 @@ export default function Demo() {
 
   const handleClick = () => {
     pwaInstall({
-      title: "Install Web App",
-      logo: "src/logo.png",
-      features: (
-        <ul>
-          <li>Cool feature 1</li>
-          <li>Cool feature 2</li>
-          <li>Even cooler feature</li>
-          <li>Works offline</li>
-        </ul>
-      ),
+      installTitle: "Install",
+      closeTitle: "Tutup",
       description: "This is a very good app that does a lot of useful stuff. ",
     })
       .then(() => {
-        alert("App installed successfully or the install instruction was shown");
+        alert(
+          "App installed successfully or the install instruction was shown"
+        );
       })
       .catch(() => alert("App not installed, user opted out. "));
   };

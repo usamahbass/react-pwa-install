@@ -1,6 +1,13 @@
-import React, { useState, useRef, useEffect, createContext, useContext } from "react";
+import React, {
+  useState,
+  useRef,
+  useEffect,
+  createContext,
+  useContext,
+} from "react";
 import { platforms, getPlatform } from "./Platforms";
-import InstallDialog from "./InstallDialog";
+import SnackbarInstall from "./SnackbarInstall";
+import "./index.css";
 
 const ReactPWAInstallContext = createContext(Promise.reject);
 
@@ -19,9 +26,15 @@ export const ReactPWAInstallProvider = ({ children, enableLogging }) => {
   });
 
   useEffect(() => {
-    window.addEventListener("beforeinstallprompt", handleBeforeInstallPromptEvent);
+    window.addEventListener(
+      "beforeinstallprompt",
+      handleBeforeInstallPromptEvent
+    );
     return function cleanup() {
-      window.removeEventListener("beforeinstallprompt", handleBeforeInstallPromptEvent);
+      window.removeEventListener(
+        "beforeinstallprompt",
+        handleBeforeInstallPromptEvent
+      );
     };
   }, []);
 
@@ -32,7 +45,10 @@ export const ReactPWAInstallProvider = ({ children, enableLogging }) => {
   }
 
   function isInstalled() {
-    if (window.navigator.standalone === true || window.matchMedia("(display-mode: standalone)").matches) {
+    if (
+      window.navigator.standalone === true ||
+      window.matchMedia("(display-mode: standalone)").matches
+    ) {
       logger("isInstalled: true. Already in standalone mode");
       return true;
     }
@@ -113,13 +129,15 @@ export const ReactPWAInstallProvider = ({ children, enableLogging }) => {
 
   return (
     <>
-      <ReactPWAInstallContext.Provider value={contextValue} children={children} />
+      <ReactPWAInstallContext.Provider
+        value={contextValue}
+        children={children}
+      />
 
-      <InstallDialog
-        open={Boolean(dialogState)}
-        onSubmit={handleInstall}
+      <SnackbarInstall
         onClose={handleClose}
-        platform={platform}
+        open={Boolean(dialogState)}
+        handleInstall={handleInstall}
         {...dialogState}
       />
     </>
