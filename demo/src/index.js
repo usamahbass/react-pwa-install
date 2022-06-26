@@ -12,7 +12,7 @@ export default function Demo() {
     pwaInstall({
       installTitle: "Install",
       closeTitle: "Tutup",
-      description: "This is a very good app that does a lot of useful stuff. ",
+      description: "Installing uses almost no storage and provides a quick way to return to this app",
     })
       .then(() => {
         alert(
