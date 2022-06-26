@@ -21,13 +21,16 @@
     "test:watch": "nwb test-react --server"
   },
   "dependencies": {
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@mui/material": "^5.8.5",
+    "@mui/styles": "^5.8.4",
     "mobile-device-detect": "^0.4.3"
   },
   "peerDependencies": {
     "react": "16.x"
   },
   "devDependencies": {
-    "@material-ui/core": "^4.9.12",
     "nwb": "0.24.x",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"

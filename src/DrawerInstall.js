@@ -1,44 +1,45 @@
 import React from "react";
-import { Drawer, Button, Typography, Box, makeStyles } from "@material-ui/core";
+import { makeStyles } from "@mui/styles";
+import { Drawer, Button, Typography, Box } from "@mui/material";
 
 const useDrawerInstallStyles = makeStyles(() => ({
   customDrawerPaper: {
-    width: "100%",
-    height: "370px",
-    display: "block",
-    margin: "0 auto",
-    maxWidth: "480px",
-    backgroundColor: "#5DC3B2",
-    boxShadow: "none",
-    border: 0,
-    right: '12px',
-    overflow: "hidden",
+    width: "100% !important",
+    height: "370px !important",
+    display: "block !important",
+    margin: "0 auto !important",
+    maxWidth: "480px !important",
+    backgroundColor: "#5DC3B2 !important",
+    boxShadow: "none !important",
+    border: "0 !important",
+    right: "12px !important",
+    overflow: "hidden !important",
   },
   customBtnInstall: {
-    width: "300px",
-    height: "50px",
-    backgroundColor: "white",
-    color: "#5DC3B2",
-    fontWeight: 600,
-    borderRadius: "20px",
-    marginTop: "1.5rem",
+    width: "300px !important",
+    height: "50px !important",
+    backgroundColor: "white !important",
+    color: "#5DC3B2 !important",
+    fontWeight: "600 !important",
+    borderRadius: "20px !important",
+    marginTop: "1.5rem !important",
     "&:hover": {
-      backgroundColor: "white",
-      opacity: 0.8,
+      backgroundColor: "white !important",
+      opacity: "0.8 !important",
     },
   },
   customBtnClose: {
-    width: "300px",
-    height: "50px",
-    backgroundColor: "#5DC3B2",
-    color: "white",
-    border: "1px solid #fff",
-    fontWeight: 600,
-    borderRadius: "20px",
-    marginTop: "1.5rem",
+    width: "300px !important",
+    height: "50px !important",
+    backgroundColor: "#5DC3B2 !important",
+    color: "white !important",
+    border: "1px solid #fff !important",
+    fontWeight: "600 !important",
+    borderRadius: "20px !important",
+    marginTop: "1.5rem !important",
     "&:hover": {
-      backgroundColor: "#5DC3B2",
-      opacity: 0.8,
+      backgroundColor: "#5DC3B2 !important",
+      opacity: "0.8 !important",
     },
   },
 }));
@@ -67,10 +68,11 @@ const DrawerInstall = ({
         justifyContent="center"
       >
         <Typography
-          variant="h5"
+          variant="h6"
           alignn="center"
           style={{
             color: "white",
+            fontSize: '1.15rem',
             textAlign: "center",
             fontFamily: `'Poppins', sans-serif`,
           }}
