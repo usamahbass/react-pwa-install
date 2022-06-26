@@ -1,0 +1,43 @@
+.custom-drawer-paper {
+  width: 100% !important;
+  height: 370px !important;
+  display: block !important;
+  margin: 0 auto !important;
+  max-width: 480px !important;
+  background-color: #5dc3b2 !important;
+  box-shadow: none !important;
+  border: 0 !important;
+  right: 12px !important;
+  overflow: hidden !important;
+}
+
+.custom-btn-install {
+  width: 300px !important;
+  height: 50px !important;
+  background-color: white !important;
+  color: #5dc3b2 !important;
+  font-weight: 600 !important;
+  border-radius: 20px !important;
+  margin-top: 1.5rem !important;
+}
+
+.custom-btn-install:hover {
+  background-color: white !important;
+  opacity: 0.8 !important;
+}
+
+.custom-btn-close {
+  width: 300px !important;
+  height: 50px !important;
+  background-color: #5dc3b2 !important;
+  color: white !important;
+  border: 1px solid #fff !important;
+  font-weight: 600 !important;
+  border-radius: 20px !important;
+  margin-top: 1.5rem !important;
+}
+
+.custom-btn-close:hover {
+  background-color: #5dc3b2 !important;
+  opacity: 0.8 !important;
+}
