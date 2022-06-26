@@ -7,7 +7,6 @@ import React, {
 } from "react";
 import { platforms, getPlatform } from "./Platforms";
 import DrawerInstall from "./DrawerInstall";
-import "./index.css";
 
 const ReactPWAInstallContext = createContext(Promise.reject);
 

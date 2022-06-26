@@ -1,5 +1,45 @@
 import React from "react";
-import { Drawer, Button, Typography, Box } from "@material-ui/core";
+import { Drawer, Button, Typography, Box, makeStyles } from "@material-ui/core";
+
+const useDrawerInstallStyles = makeStyles(() => ({
+  customDrawerPaper: {
+    width: "100%",
+    height: "340px",
+    display: "block",
+    margin: "0 auto",
+    maxWidth: "480px",
+    backgroundColor: "#7f37fb",
+    boxShadow: "none",
+    border: 0,
+  },
+  customBtnInstall: {
+    width: "300px",
+    height: "50px",
+    backgroundColor: "white",
+    color: "#7f37fb",
+    fontWeight: 600,
+    borderRadius: "20px",
+    marginTop: "1.5rem",
+    "&:hover": {
+      backgroundColor: "white",
+      opacity: 0.8,
+    },
+  },
+  customBtnClose: {
+    width: "300px",
+    height: "50px",
+    backgroundColor: "#7f37fb",
+    color: "white",
+    border: "1px solid #fff",
+    fontWeight: 600,
+    borderRadius: "20px",
+    marginTop: "1.5rem",
+    "&:hover": {
+      backgroundColor: "#7f37fb",
+      opacity: 0.8,
+    },
+  },
+}));
 
 const DrawerInstall = ({
   open,
@@ -9,11 +49,12 @@ const DrawerInstall = ({
   installTitle,
   closeTitle,
 }) => {
+  const classes = useDrawerInstallStyles();
   return (
     <Drawer
       anchor="bottom"
       open={open}
-      classes={{ paper: "custom-drawer-paper" }}
+      classes={{ paper: classes.customDrawerPaper }}
     >
       <Box
         gap="5"
@@ -35,10 +76,10 @@ const DrawerInstall = ({
           {description}
         </Typography>
 
-        <Button className="custom-btn-install" onClick={handleInstall}>
+        <Button className={classes.customBtnInstall} onClick={handleInstall}>
           {installTitle}
         </Button>
-        <Button className="custom-btn-close" onClick={onClose}>
+        <Button className={classes.customBtnClose} onClick={onClose}>
           {closeTitle}
         </Button>
       </Box>
